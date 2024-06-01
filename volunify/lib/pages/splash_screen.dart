@@ -22,6 +22,5 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.white,
       
     );
-    return Scaffold(body: Center(child: Text('hi')),);
   }
 }

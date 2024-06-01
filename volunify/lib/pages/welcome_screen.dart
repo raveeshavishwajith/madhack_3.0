@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:slide_to_act/slide_to_act.dart';
+import 'package:volunify/pages/loginScreen.dart';
 import 'package:volunify/pages/splash_screen.dart';
+import 'package:volunify/utils/showsignin.dart';
+import 'package:volunify/utils/showsignup.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -59,7 +62,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
           ),
           SizedBox(
-            height: !isShown? screensize.height * 0.15:screensize.height * 0.1,
+            height:
+                !isShown ? screensize.height * 0.15 : screensize.height * 0.1,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
@@ -76,28 +80,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     onSubmit: () async {
                       isShown = !isShown;
                       setState(() {});
-                      //do something
-                      // showDialog(
-                      //     context: context,
-                      //     builder: (context) => Center(
-                      //           child: Container(
-                      //             decoration: BoxDecoration(
-                      //                 color: Colors.white.withOpacity(0.5),
-                      //                 shape: BoxShape.circle),
-                      //             child: Lottie.asset('asset/load.json'
-                      //               ,
-                      //               width: 75,
-                      //               height: 75,
-                      //             ),
-                      //           ),
-                      //         ));
-                      // await Future.delayed(const Duration(milliseconds: 3400));
-                      // Navigator.of(context).pop();
-
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => const SplashScreen()));
                     },
                     text: 'Slide to unlock',
                     sliderRotate: false,
@@ -107,44 +89,61 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     children: [
                       Center(
                         child: GestureDetector(
-                          onTap: (){},
+                          onTap: () {},
                           child: Container(
-                           
-                            decoration:  BoxDecoration(border: Border.all(width: 2),color: Colors.transparent,borderRadius: BorderRadius.all(Radius.circular(10))),
+                            decoration: BoxDecoration(
+                                border: Border.all(width: 2),
+                                color: Colors.transparent,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10))),
                             width: screensize.width * 0.85,
                             height: screensize.height * 0.07,
-                             child: Padding(
-                               padding: const EdgeInsets.all(8.0),
-                               child: Text(
-                                'Sign In',
-                                style: TextStyle(
-                                  fontSize: screensize.width * 0.06,
+                            child: InkWell(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Sign In',
+                                  style: TextStyle(
+                                    fontSize: screensize.width * 0.06,
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign:TextAlign.center ,
-                                                         ),
-                             ),
+                              ),
+                              onTap: () {
+                                showModalSignIn(context: context);
+                              },
+                            ),
                           ),
                         ),
-                      ),SizedBox(height: 20,),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Center(
                         child: GestureDetector(
-                          onTap: (){},
+                          onTap: () {},
                           child: Container(
-                           
-                            decoration:  const BoxDecoration(color: Color(0xff1C94CC),borderRadius: BorderRadius.all(Radius.circular(10))),
+                            decoration: const BoxDecoration(
+                                color: Color(0xff1C94CC),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10))),
                             width: screensize.width * 0.85,
                             height: screensize.height * 0.07,
-                             child: Padding(
-                               padding: const EdgeInsets.all(8.0),
-                               child: Text(
-                                'Sign Up',
-                                style: TextStyle(
-                                  fontSize: screensize.width * 0.06,
-                                  color: Colors.white
+                            child: InkWell(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Sign Up',
+                                  style: TextStyle(
+                                      fontSize: screensize.width * 0.06,
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign:TextAlign.center ,
-                                                         ),
-                             ),
+                              ),
+                              onTap: () {
+                                showModalSignup(context: context);
+                              },
+                            ),
                           ),
                         ),
                       ),

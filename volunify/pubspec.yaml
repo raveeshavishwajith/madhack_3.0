@@ -73,7 +73,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - asset/logo.png
+    - asset/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -90,9 +90,12 @@ flutter:
   fonts:
     - family: Raleway
       fonts:
-        - asset: assets/fonts/Raleway-Bold.ttf
-        - asset: assets/fonts/Raleway-Medium.ttf
-        - asset: assets/fonts/Raleway-SemiBold.ttf
+        - asset: asset/fonts/Raleway-Bold.ttf
+          weight: 700
+        - asset: asset/fonts/Raleway-Medium.ttf
+          weight: 500
+        - asset: asset/fonts/Raleway-SemiBold.ttf
+          weight: 600
   #         style: italic
 
 

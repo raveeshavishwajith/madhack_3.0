@@ -1,12 +1,15 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:volunify/utils/global_variable.dart';
 
 // ignore: must_be_immutable
 class InputField extends StatelessWidget {
   String? mode;
   IconData prefixIcon;
+  IconButton? suffixIconButton;
   IconData? suffixIcon;
+  VoidCallback? suffixOnPress;
   String? hintText;
   String labelText;
   bool obsecureText;
@@ -19,6 +22,7 @@ class InputField extends StatelessWidget {
       required this.labelText,
       required this.obsecureText,
       required this.textEditingController,
+      this.suffixIconButton,
       this.keyboardType,
       this.suffixIcon,
       this.mode,
@@ -35,21 +39,29 @@ class InputField extends StatelessWidget {
         controller: textEditingController,
         obscureText: obsecureText,
         decoration: InputDecoration(
+          floatingLabelBehavior: FloatingLabelBehavior.never,
           contentPadding: mode == "update"
               ? const EdgeInsets.symmetric(vertical: 5.0)
               : const EdgeInsets.symmetric(vertical: 20.0),
           prefixIcon:
               Icon(prefixIcon, color: GlobalVariables.darkBlue, size: 25),
           suffixIcon:
-              Icon(suffixIcon, color: GlobalVariables.darkBlue, size: 25),
+              // Icon(suffixIcon, color: GlobalVariables.darkBlue, size: 25),
+              //   IconButton(
+              // icon: Icon(suffixIcon),
+              // onPressed: suffixOnPress,
+              // ),
+              suffixIconButton,
           hintText: hintText,
           labelText: labelText,
-          fillColor: GlobalVariables.backgroundColor,
+          labelStyle: TextStyle(color: Colors.black),
+          fillColor: GlobalVariables.formbackgroundColor,
+          filled: true,
           enabledBorder: mode != "update"
               ? OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.0),
                   borderSide: const BorderSide(
-                      color: GlobalVariables.darkBlue, width: 1.25),
+                      color: GlobalVariables.backgroundColor, width: 1.25),
                 )
               : null,
           focusedBorder: mode != "update"

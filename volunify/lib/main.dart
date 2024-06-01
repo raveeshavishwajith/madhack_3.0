@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:volunify/pages/manage_application.dart';
+import 'package:volunify/pages/organization/bottomAppBar.dart';
+import 'package:volunify/pages/organization/dashboard.dart';
 import 'package:volunify/pages/splash_screen.dart';
 import 'package:volunify/pages/loginScreen.dart';
 
@@ -21,6 +24,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: SplashScreen());
+        home: CustomBottomAppBar());
   }
 }

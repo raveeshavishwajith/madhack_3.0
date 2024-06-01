@@ -6,7 +6,7 @@ String baseUrl =
 // String baseUrl = "http://10.0.2.2:8080/golumbia_api";
 
 class GlobalVariables {
-  static const Color backgroundColor = Color.fromRGBO(245, 245, 250, 1);
+  static const Color backgroundColor = Color(0xffF8FAFC);
   static const Color lightBlue = Color.fromRGBO(12, 83, 176, 1);
   // static const Color darkBlue = Color.fromRGBO(5, 35, 74, 1);
   static const Color green = Color.fromARGB(255, 86, 180, 95);

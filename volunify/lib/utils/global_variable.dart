@@ -8,7 +8,7 @@ String baseUrl =
 class GlobalVariables {
   static const Color backgroundColor = Color.fromRGBO(245, 245, 250, 1);
   static const Color lightBlue = Color.fromRGBO(12, 83, 176, 1);
-  static const Color darkBlue = Color.fromRGBO(5, 35, 74, 1);
+  // static const Color darkBlue = Color.fromRGBO(5, 35, 74, 1);
   static const Color green = Color.fromARGB(255, 86, 180, 95);
   static const Color red = Color.fromARGB(255, 235, 80, 80);
   static const Color gray = Color.fromARGB(255, 66, 64, 64);

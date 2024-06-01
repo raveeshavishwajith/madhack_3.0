@@ -41,8 +41,14 @@ dependencies:
   firebase_auth: ^4.20.0
   cloud_firestore: ^4.17.5
   lottie: ^3.1.2
+
   iconify_flutter: ^0.0.5
   curved_labeled_navigation_bar: ^2.0.2
+
+  slide_to_act: ^2.0.2
+  dotted_border: ^2.1.0
+  smooth_page_indicator: ^1.1.0
+
 
 
 flutter_launcher_icons:
@@ -75,7 +81,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - asset/logo.png
+    - asset/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -92,9 +98,12 @@ flutter:
   fonts:
     - family: Raleway
       fonts:
-        - asset: assets/fonts/Raleway-Bold.ttf
-        - asset: assets/fonts/Raleway-Medium.ttf
-        - asset: assets/fonts/Raleway-SemiBold.ttf
+        - asset: asset/fonts/Raleway-Bold.ttf
+          weight: 700
+        - asset: asset/fonts/Raleway-Medium.ttf
+          weight: 500
+        - asset: asset/fonts/Raleway-SemiBold.ttf
+          weight: 600
   #         style: italic
 
 

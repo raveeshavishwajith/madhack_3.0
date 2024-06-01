@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "112636467824",
+    "project_id": "volunify-38c7b",
+    "storage_bucket": "volunify-38c7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112636467824:android:860bc0c008d1c86f5d32b5",
+        "android_client_info": {
+          "package_name": "com.example.volunify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPotLVW5Qk76_JccG2xxg7rUXWtNlGnNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

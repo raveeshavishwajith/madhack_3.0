@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+
+import 'package:volunify/pages/manage_application.dart';
+import 'package:volunify/pages/organization/bottomAppBar.dart';
+import 'package:volunify/pages/organization/dashboard.dart';
+
 import 'package:volunify/pages/organization/components/create_event_component.dart';
 import 'package:volunify/pages/organization/create_event2.dart';
 import 'package:volunify/pages/organization/create_event3.dart';
@@ -20,6 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -29,5 +35,6 @@ class MyApp extends StatelessWidget {
       ),
       home: CreateEventComponent()
     );
+
   }
 }

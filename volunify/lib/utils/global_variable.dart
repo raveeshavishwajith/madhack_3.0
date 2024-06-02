@@ -14,7 +14,7 @@ class GlobalVariables {
   // static const Color darkBlue = Color.fromRGBO(5, 35, 74, 1);
   static const Color green = Color.fromARGB(255, 86, 180, 95);
   static const Color red = Color.fromARGB(255, 235, 80, 80);
-  static const Color gray = Color.fromARGB(255, 66, 64, 64);
+  static const Color gray = Color.fromARGB(255, 178, 172, 172);
   static const Color darkgray = Color.fromARGB(255, 40, 40, 39);
   static const Color yellow = Color.fromARGB(255, 219, 176, 66);
   static const Color darkBlue = Color(0xff041B26); // our

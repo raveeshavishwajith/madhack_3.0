@@ -140,6 +140,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             onTap: () {},
                             child: Container(
                               decoration: BoxDecoration(
+
                                   border: Border.all(
                                       width: 2,
                                       color: GlobalVariables.backgroundColor),
@@ -154,6 +155,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                   child: Text(
                                     'Sign In',
                                     style: TextStyle(
+
                                       color: GlobalVariables.backgroundColor,
                                       fontSize: screensize.width * 0.06,
                                     ),
@@ -189,10 +191,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       color: Colors.white),
                                   textAlign: TextAlign.center,
                                 ),
+                                onTap: () {
+                                  showModalSignup(context: context);
+                                },
                               ),
-                              onTap: () {
-                                showModalSignup(context: context);
-                              },
                             ),
                           ),
                         ),
@@ -217,8 +219,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     color: GlobalVariables.backgroundColor),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

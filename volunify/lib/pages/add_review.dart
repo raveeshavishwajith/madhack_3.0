@@ -220,7 +220,42 @@ class _AddReviewState extends State<AddReview> {
                 decoration: InputDecoration(
                   labelText: "Review Title",
                 ),
-              )
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                maxLines: 5,
+                decoration: InputDecoration(label: Text("Review")),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        width: 2, color: GlobalVariables.backgroundColor),
+                    color: GlobalVariables.darkBlue,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                  width: screenSize.width * 0.70,
+                  height: screenSize.height * 0.07,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Sumbit',
+                      style: TextStyle(
+                        fontSize: screenSize.width * 0.06,
+                        fontWeight: FontWeight.w600,
+                        color: GlobalVariables.backgroundColor,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

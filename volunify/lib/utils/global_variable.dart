@@ -37,4 +37,12 @@ class GlobalVariables {
     ],
     stops: [0.0, 0.68],
   );
+
+  static final carouselImageList = [
+    './asset/b1.jpg',
+    './asset/b2.jpeg',
+    './asset/b3.jpg',
+    // './assets/b4.jpeg',
+    // './assets/b5.jpeg',
+  ];
 }

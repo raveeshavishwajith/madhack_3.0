@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:volunify/pages/manage_application.dart';
+import 'package:volunify/pages/organization/components/create_event_component.dart';
+import 'package:volunify/pages/organization/create_event_page1.dart';
 import 'package:volunify/utils/global_variable.dart';
 
 class OrganizationDashboard extends StatefulWidget {
@@ -25,6 +28,16 @@ class _OrganizationDashboardState extends State<OrganizationDashboard> {
           style: TextStyle(fontSize: screenSize.width * 0.06),
         ),
         centerTitle: true,
+        leading: null,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: ((context) => const CreateEventComponent())));
+        },
+        child: const Icon(Icons.add),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),

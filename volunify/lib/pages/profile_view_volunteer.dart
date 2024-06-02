@@ -42,278 +42,285 @@ class _ProfileViewState extends State<ProfileViewVolunteer> {
         ],
       ),
       body: Center(
-        child: Column(
-          children: [
-            CircleAvatar(
-              backgroundColor: Colors.brown.shade800,
-              radius: 100,
-              backgroundImage: NetworkImage(
-                "https://imgs.search.brave.com/L1TvJ87kZeOKnaJoPMlifnQDdOAt51o3Db0_UNhpeWc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kaXZlcnNlLXBl/b3BsZS1zaG9vdF81/Mzg3Ni01NTg4Mi5q/cGc_c2l6ZT02MjYm/ZXh0PWpwZw",
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              "Green Plant",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.location_on_outlined,
-                  color: GlobalVariables.gray,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              CircleAvatar(
+                backgroundColor: Colors.brown.shade800,
+                radius: 100,
+                backgroundImage: NetworkImage(
+                  "https://imgs.search.brave.com/L1TvJ87kZeOKnaJoPMlifnQDdOAt51o3Db0_UNhpeWc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kaXZlcnNlLXBl/b3BsZS1zaG9vdF81/Mzg3Ni01NTg4Mi5q/cGc_c2l6ZT02MjYm/ZXh0PWpwZw",
                 ),
-                Text(
-                  "Colombo, Sri Lanka",
-                  style: TextStyle(
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                "Green Plant",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.location_on_outlined,
                     color: GlobalVariables.gray,
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
-            Text(
-              "greenplanet11@gmail.com",
-              style: TextStyle(
-                color: GlobalVariables.gray,
-                fontSize: 16,
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      "1.3K",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    Text(
-                      "Events",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 25,
-                  width: 2,
-                  color: GlobalVariables.gray,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Column(
-                  children: [
-                    Text(
-                      "1.3K",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    Text(
-                      "Events",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 25,
-                  width: 2,
-                  color: GlobalVariables.gray,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Column(
-                  children: [
-                    Text(
-                      "1.3K",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    Text(
-                      "Events",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              width: screenSize.width * 0.9,
-              height: 1,
-              color: GlobalVariables.gray,
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Available",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-                  ),
-                  // Switch(
-                  //   value: available,
-                  //   thumbIcon: thumbIcon,
-                  //   onChanged: (bool value) {
-                  //     setState(() {
-                  //       available = value;
-                  //     });
-                  //   },
-                  // )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Notifications",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-                  ),
-                  // Switch(
-                  //   value: notifications,
-                  //   thumbIcon: thumbIcon,
-                  //   onChanged: (bool value) {
-                  //     setState(() {
-                  //       notifications = value;
-                  //     });
-                  //   },
-                  // )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Skills",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                   ),
                   Text(
-                    ">",
-                    style: TextStyle(fontSize: 30),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Certifications",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-                  ),
-                  Text(
-                    ">",
-                    style: TextStyle(fontSize: 30),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Feedbacks",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-                  ),
-                  Text(
-                    ">",
-                    style: TextStyle(fontSize: 30),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(width: 2, color: GlobalVariables.red),
-                  color: GlobalVariables.red,
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                ),
-                width: screenSize.width * 0.70,
-                height: screenSize.height * 0.07,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Logout',
+                    "Colombo, Sri Lanka",
                     style: TextStyle(
-                      fontSize: screenSize.width * 0.06,
-                      fontWeight: FontWeight.w600,
-                      color: GlobalVariables.backgroundColor,
+                      color: GlobalVariables.gray,
+                      fontSize: 16,
                     ),
-                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              Text(
+                "greenplanet11@gmail.com",
+                style: TextStyle(
+                  color: GlobalVariables.gray,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        "1.3K",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        "Events",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    height: 25,
+                    width: 2,
+                    color: GlobalVariables.gray,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "1.3K",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        "Events",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    height: 25,
+                    width: 2,
+                    color: GlobalVariables.gray,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "1.3K",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Text(
+                        "Events",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                width: screenSize.width * 0.9,
+                height: 1,
+                color: GlobalVariables.gray,
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Available",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    ),
+                    // Switch(
+                    //   value: available,
+                    //   thumbIcon: thumbIcon,
+                    //   onChanged: (bool value) {
+                    //     setState(() {
+                    //       available = value;
+                    //     });
+                    //   },
+                    // )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Notifications",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    ),
+                    // Switch(
+                    //   value: notifications,
+                    //   thumbIcon: thumbIcon,
+                    //   onChanged: (bool value) {
+                    //     setState(() {
+                    //       notifications = value;
+                    //     });
+                    //   },
+                    // )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Skills",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    ),
+                    Text(
+                      ">",
+                      style: TextStyle(fontSize: 30),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Certifications",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    ),
+                    Text(
+                      ">",
+                      style: TextStyle(fontSize: 30),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: screenSize.width * 0.09),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Feedbacks",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    ),
+                    Text(
+                      ">",
+                      style: TextStyle(fontSize: 30),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 2, color: GlobalVariables.red),
+                    color: GlobalVariables.red,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                  width: screenSize.width * 0.70,
+                  height: screenSize.height * 0.07,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Logout',
+                      style: TextStyle(
+                        fontSize: screenSize.width * 0.06,
+                        fontWeight: FontWeight.w600,
+                        color: GlobalVariables.backgroundColor,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

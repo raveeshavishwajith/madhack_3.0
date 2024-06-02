@@ -140,7 +140,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             onTap: () {},
                             child: Container(
                               decoration: BoxDecoration(
-
                                   border: Border.all(
                                       width: 2,
                                       color: GlobalVariables.backgroundColor),
@@ -155,7 +154,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                   child: Text(
                                     'Sign In',
                                     style: TextStyle(
-
                                       color: GlobalVariables.backgroundColor,
                                       fontSize: screensize.width * 0.06,
                                     ),
@@ -182,19 +180,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             width: screensize.width * 0.85,
                             height: screensize.height * 0.07,
                             child: InkWell(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Sign Up',
-                                  style: TextStyle(
-                                      fontSize: screensize.width * 0.06,
-                                      color: Colors.white),
-                                  textAlign: TextAlign.center,
-                                ),
-                                onTap: () {
-                                  showModalSignup(context: context);
-                                },
-                              ),
+                              onTap: () {
+                                showModalSignup(context: context);
+                                child:
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Sign Up',
+                                    style: TextStyle(
+                                        fontSize: screensize.width * 0.06,
+                                        color: Colors.white),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         ),
@@ -219,8 +218,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     color: GlobalVariables.backgroundColor),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

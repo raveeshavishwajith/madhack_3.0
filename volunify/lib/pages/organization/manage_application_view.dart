@@ -14,29 +14,24 @@ class ManageApplicationView extends StatefulWidget {
 }
 
 class _ManageApplicationViewState extends State<ManageApplicationView> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'ManageApplicationView',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Color(0xff393939)),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Wrap(
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 35.0, top: 30, bottom: 10),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'ManageApplicationView',
-                      style: TextStyle(
-                          fontSize: 33,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff393939)),
-                    ),
-                  ),
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -111,52 +106,54 @@ class _ManageApplicationViewState extends State<ManageApplicationView> {
                 const SizedBox(
                   height: 10,
                 ),
-
-               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                 children: [
-                  SizedBox(width: 10,),
-                   Container(
-                          width: 100,
-                          height: 30,
-                          decoration: BoxDecoration(
-                              color: const Color(0xff393939),
-                              borderRadius: BorderRadius.circular(5)),
-                          child: const Center(
-                            child: Text(
-                              'Recieved',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 10,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 30,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff393939),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const Center(
+                        child: Text(
+                          'Recieved',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
                           ),
+                          textAlign: TextAlign.center,
                         ),
-                        Spacer(),
-                   Container(
-                          width: 200,
-                          height: 30,
-                          decoration: BoxDecoration(
-                              color:  Colors.transparent,
-                              borderRadius: BorderRadius.circular(5)),
-                          child: const Center(
-                            child: Text(
-                              'Carbon Neutral Program',
-                              style: TextStyle(
-                                color: Color(0xffACACAC),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+                      width: 200,
+                      height: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const Center(
+                        child: Text(
+                          'Carbon Neutral Program',
+                          style: TextStyle(
+                            color: Color(0xffACACAC),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
                           ),
+                          textAlign: TextAlign.center,
                         ),
-                 ],
-               ),
-               SizedBox(height: 30,),
-
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -194,17 +191,17 @@ class _ManageApplicationViewState extends State<ManageApplicationView> {
                                       color: Color(0xff393939),
                                       fontWeight: FontWeight.bold),
                                 ),
-                               
                               ],
                             ),
                           ),
                         )
                       ],
                     ),
-                    
                   ],
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -242,17 +239,17 @@ class _ManageApplicationViewState extends State<ManageApplicationView> {
                                       color: Color(0xff393939),
                                       fontWeight: FontWeight.bold),
                                 ),
-                               
                               ],
                             ),
                           ),
                         )
                       ],
                     ),
-                    
                   ],
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -290,17 +287,17 @@ class _ManageApplicationViewState extends State<ManageApplicationView> {
                                       color: Color(0xff393939),
                                       fontWeight: FontWeight.bold),
                                 ),
-                               
                               ],
                             ),
                           ),
                         )
                       ],
                     ),
-                    
                   ],
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -338,17 +335,17 @@ class _ManageApplicationViewState extends State<ManageApplicationView> {
                                       color: Color(0xff393939),
                                       fontWeight: FontWeight.bold),
                                 ),
-                               
                               ],
                             ),
                           ),
                         )
                       ],
                     ),
-                    
                   ],
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -386,17 +383,17 @@ class _ManageApplicationViewState extends State<ManageApplicationView> {
                                       color: Color(0xff393939),
                                       fontWeight: FontWeight.bold),
                                 ),
-                               
                               ],
                             ),
                           ),
                         )
                       ],
                     ),
-                    
                   ],
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -434,18 +431,17 @@ class _ManageApplicationViewState extends State<ManageApplicationView> {
                                       color: Color(0xff393939),
                                       fontWeight: FontWeight.bold),
                                 ),
-                               
                               ],
                             ),
                           ),
                         )
                       ],
                     ),
-                    
                   ],
                 ),
-                SizedBox(height: 10,),
-                
+                SizedBox(
+                  height: 10,
+                ),
               ],
             ),
           ],

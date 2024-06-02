@@ -91,11 +91,11 @@ Future<void> showModalSignup({required BuildContext context}) async {
                               MaterialPageRoute(
                                   builder: (context) => const CurvedBar()));
                         }
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(message),
-                          ),
-                        );
+                        // ScaffoldMessenger.of(context).showSnackBar(
+                        //   SnackBar(
+                        //     content: Text(message),
+                        //   ),
+                        // );
                       },
                       child: Container(
                         decoration: BoxDecoration(

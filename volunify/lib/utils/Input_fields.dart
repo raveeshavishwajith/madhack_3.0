@@ -45,13 +45,7 @@ class InputField extends StatelessWidget {
               : const EdgeInsets.symmetric(vertical: 20.0),
           prefixIcon:
               Icon(prefixIcon, color: GlobalVariables.darkBlue, size: 25),
-          suffixIcon:
-              // Icon(suffixIcon, color: GlobalVariables.darkBlue, size: 25),
-              //   IconButton(
-              // icon: Icon(suffixIcon),
-              // onPressed: suffixOnPress,
-              // ),
-              suffixIconButton,
+          suffixIcon: suffixIconButton,
           hintText: hintText,
           labelText: labelText,
           labelStyle: TextStyle(color: Colors.black),

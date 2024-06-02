@@ -76,7 +76,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Voluntify',
+                    'Volunify',
                     style: TextStyle(
                         fontSize: screensize.width * 0.14,
                         fontWeight: FontWeight.w900,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:volunify/pages/add_review.dart';
 
 import 'package:volunify/pages/manage_application.dart';
 import 'package:volunify/pages/organization/bottomAppBar.dart';
@@ -9,6 +10,8 @@ import 'package:volunify/pages/organization/components/create_event_component.da
 import 'package:volunify/pages/organization/create_event2.dart';
 import 'package:volunify/pages/organization/create_event3.dart';
 import 'package:volunify/pages/organization/create_event_page1.dart';
+import 'package:volunify/pages/profile_view_organization.dart';
+import 'package:volunify/pages/profile_view_volunteer.dart';
 import 'package:volunify/pages/splash_screen.dart';
 import 'package:volunify/pages/loginScreen.dart';
 
@@ -30,6 +33,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: SplashScreen());
+        home: AddReview());
   }
 }

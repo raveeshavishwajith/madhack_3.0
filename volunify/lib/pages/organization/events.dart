@@ -83,10 +83,14 @@ class _EventsState extends State<Events> {
                           width: 70,
                           height: 20,
                           decoration: BoxDecoration(
-                              color:  Colors.transparent,
+                              color: Colors.transparent,
                               borderRadius: BorderRadius.circular(20)),
                           child: const Center(
-                            child:Icon(Icons.call,size: 23,color: Color(0xFF095B66),),
+                            child: Icon(
+                              Icons.call,
+                              size: 23,
+                              color: Color(0xFF095B66),
+                            ),
                           ),
                         ),
                       ],
@@ -213,7 +217,6 @@ class _EventsState extends State<Events> {
                               ),
                             ),
                           ),
-                         
                         ],
                       ),
                     ),
@@ -254,15 +257,12 @@ class _EventsState extends State<Events> {
                             ),
                           ),
                           TextSpan(
-                            text:
-                                'jane.doe@example.org',
+                            text: 'jane.doe@example.org',
                             style: TextStyle(
                                 color: Color(0xFF095B66),
                                 fontSize: 13,
                                 fontWeight: FontWeight.normal),
                           ),
-                          
-                         
                         ],
                       ),
                     ),
@@ -432,7 +432,9 @@ class _EventsState extends State<Events> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Stack(
                   children: [
                     Container(
@@ -989,7 +991,6 @@ class _EventsState extends State<Events> {
                 const SizedBox(
                   height: 10,
                 ),
-               
               ],
             ),
           ],

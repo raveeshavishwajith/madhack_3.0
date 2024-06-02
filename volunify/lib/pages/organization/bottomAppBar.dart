@@ -7,6 +7,10 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
 import 'package:iconify_flutter/icons/material_symbols.dart';
 import 'package:volunify/pages/organization/dashboard.dart';
+import 'package:volunify/pages/organization/events.dart';
+import 'package:volunify/pages/organization/manage_application.dart';
+import 'package:volunify/pages/organization/manage_application_view.dart';
+import 'package:volunify/pages/profile_view_organization.dart';
 import 'package:volunify/utils/global_variable.dart';
 
 class CurvedBar extends StatefulWidget {
@@ -21,9 +25,9 @@ class _CurvedBarState extends State<CurvedBar> {
 
   List<Widget> body = const [
     OrganizationDashboard(),
-    Text('hi'),
-    Text('hi'),
-    Text('Profile'),
+    ManageApplications(),
+    Events(),
+    ProfileViewOrganization()
   ];
 
   @override

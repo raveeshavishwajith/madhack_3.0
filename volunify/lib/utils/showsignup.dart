@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:volunify/pages/organization/bottomAppBar.dart';
+import 'package:volunify/pages/organization/dashboard.dart';
+import 'package:volunify/services/firebase_services.dart';
 import 'package:volunify/utils/Input_fields.dart';
 import 'package:volunify/utils/global_variable.dart';
 import 'package:volunify/utils/showsignin.dart';
@@ -77,7 +80,23 @@ Future<void> showModalSignup({required BuildContext context}) async {
                       height: 30,
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () async {
+                        print('clicked!');
+                        final message = await AuthService().registration(
+                          email: _emailController.text,
+                          password: _passwordController.text,
+                        );
+                        if (message!.contains('Success')) {
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (context) => const CurvedBar()));
+                        }
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(message),
+                          ),
+                        );
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                             border: Border.all(width: 2),

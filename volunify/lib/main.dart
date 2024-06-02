@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
@@ -12,7 +13,9 @@ import 'package:volunify/pages/organization/create_event_page1.dart';
 import 'package:volunify/pages/splash_screen.dart';
 import 'package:volunify/pages/loginScreen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

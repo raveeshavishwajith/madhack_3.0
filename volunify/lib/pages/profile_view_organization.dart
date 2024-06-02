@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:volunify/pages/welcome_screen.dart';
 import 'package:volunify/utils/global_variable.dart';
 
 class ProfileViewOrganization extends StatefulWidget {
@@ -14,15 +16,15 @@ class _ProfileViewState extends State<ProfileViewOrganization> {
   bool available = true;
   bool notifications = true;
 
-  final WidgetStateProperty<Icon?> thumbIcon =
-      WidgetStateProperty.resolveWith<Icon?>(
-    (Set<WidgetState> states) {
-      if (states.contains(WidgetState.selected)) {
-        return const Icon(Icons.check);
-      }
-      return const Icon(Icons.close);
-    },
-  );
+  // final WidgetStateProperty<Icon?> thumbIcon =
+  //     WidgetStateProperty.resolveWith<Icon?>(
+  //   (Set<WidgetState> states) {
+  //     if (states.contains(WidgetState.selected)) {
+  //       return const Icon(Icons.check);
+  //     }
+  //     return const Icon(Icons.close);
+  //   },
+  // );
 
   @override
   Widget build(BuildContext context) {
@@ -189,15 +191,15 @@ class _ProfileViewState extends State<ProfileViewOrganization> {
                     "Available",
                     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                   ),
-                  Switch(
-                    value: available,
-                    thumbIcon: thumbIcon,
-                    onChanged: (bool value) {
-                      setState(() {
-                        available = value;
-                      });
-                    },
-                  )
+                  // Switch(
+                  //   value: available,
+                  //   thumbIcon: thumbIcon,
+                  //   onChanged: (bool value) {
+                  //     setState(() {
+                  //       available = value;
+                  //     });
+                  //   },
+                  // )
                 ],
               ),
             ),
@@ -214,15 +216,15 @@ class _ProfileViewState extends State<ProfileViewOrganization> {
                     "Notifications",
                     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                   ),
-                  Switch(
-                    value: notifications,
-                    thumbIcon: thumbIcon,
-                    onChanged: (bool value) {
-                      setState(() {
-                        notifications = value;
-                      });
-                    },
-                  )
+                  // Switch(
+                  //   value: notifications,
+                  //   thumbIcon: thumbIcon,
+                  //   onChanged: (bool value) {
+                  //     setState(() {
+                  //       notifications = value;
+                  //     });
+                  //   },
+                  // )
                 ],
               ),
             ),
@@ -290,7 +292,14 @@ class _ProfileViewState extends State<ProfileViewOrganization> {
               height: 10,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                await FirebaseAuth.instance.signOut();
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const WelcomeScreen()),
+                    (route) => false);
+              },
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(width: 2, color: GlobalVariables.red),

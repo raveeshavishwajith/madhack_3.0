@@ -101,11 +101,11 @@ Future<void> showModalSignIn({required BuildContext context}) async {
                             ),
                           );
                         }
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(message),
-                          ),
-                        );
+                        // ScaffoldMessenger.of(context).showSnackBar(
+                        //   SnackBar(
+                        //     content: Text(message),
+                        //   ),
+                        // );
                       },
                       child: Container(
                         decoration: BoxDecoration(

@@ -5,6 +5,7 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:iconify_flutter/icons/ph.dart';
+import 'package:volunify/pages/organization/manage_application_view.dart';
 
 class ManageApplications extends StatefulWidget {
   const ManageApplications({super.key});
@@ -14,29 +15,25 @@ class ManageApplications extends StatefulWidget {
 }
 
 class _ManageApplicationsState extends State<ManageApplications> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: null,
+        title: Text(
+          'ManageApplications',
+          style: TextStyle(
+              fontSize: 33,
+              fontWeight: FontWeight.bold,
+              color: Color(0xFF095B66)),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Wrap(
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 35.0, top: 30, bottom: 10),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'ManageApplications',
-                      style: TextStyle(
-                          fontSize: 33,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF095B66)),
-                    ),
-                  ),
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -116,44 +113,53 @@ class _ManageApplicationsState extends State<ManageApplications> {
                   children: [
                     Stack(
                       children: [
-                        Container(
-                          width: 150,
-                          height: 115,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white, width: 1),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey
-                                    .withOpacity(0.5), // Shadow color
-                                spreadRadius: 2, // Spread radius
-                                blurRadius: 5, // Blur radius
-                                offset: Offset(0, 3),
-                                // Offset
-                              ),
-                            ],
-                          ),
-                          child: const Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Recieved',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: Color(0xFF095B66),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  '146',
-                                  style: TextStyle(
-                                      fontSize: 40,
-                                      color: Color(0xFF095B66),
-                                      fontWeight: FontWeight.normal),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ManageApplicationView()));
+                          },
+                          child: Container(
+                            width: 150,
+                            height: 115,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Colors.white, width: 1),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey
+                                      .withOpacity(0.5), // Shadow color
+                                  spreadRadius: 2, // Spread radius
+                                  blurRadius: 5, // Blur radius
+                                  offset: Offset(0, 3),
+                                  // Offset
                                 ),
                               ],
+                            ),
+                            child: const Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Recieved',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color(0xFF095B66),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    '146',
+                                    style: TextStyle(
+                                        fontSize: 40,
+                                        color: Color(0xFF095B66),
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         )
@@ -206,7 +212,9 @@ class _ManageApplicationsState extends State<ManageApplications> {
                     ),
                   ],
                 ),
-                SizedBox(height: 40,),
+                SizedBox(
+                  height: 40,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

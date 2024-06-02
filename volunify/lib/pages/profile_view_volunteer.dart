@@ -14,15 +14,15 @@ class _ProfileViewState extends State<ProfileViewVolunteer> {
   bool available = true;
   bool notifications = true;
 
-  final WidgetStateProperty<Icon?> thumbIcon =
-      WidgetStateProperty.resolveWith<Icon?>(
-    (Set<WidgetState> states) {
-      if (states.contains(WidgetState.selected)) {
-        return const Icon(Icons.check);
-      }
-      return const Icon(Icons.close);
-    },
-  );
+  // final WidgetStateProperty<Icon?> thumbIcon =
+  //     WidgetStateProperty.resolveWith<Icon?>(
+  //   (Set<WidgetState> states) {
+  //     if (states.contains(WidgetState.selected)) {
+  //       return const Icon(Icons.check);
+  //     }
+  //     return const Icon(Icons.close);
+  //   },
+  // );
 
   @override
   Widget build(BuildContext context) {
@@ -189,15 +189,15 @@ class _ProfileViewState extends State<ProfileViewVolunteer> {
                     "Available",
                     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                   ),
-                  Switch(
-                    value: available,
-                    thumbIcon: thumbIcon,
-                    onChanged: (bool value) {
-                      setState(() {
-                        available = value;
-                      });
-                    },
-                  )
+                  // Switch(
+                  //   value: available,
+                  //   thumbIcon: thumbIcon,
+                  //   onChanged: (bool value) {
+                  //     setState(() {
+                  //       available = value;
+                  //     });
+                  //   },
+                  // )
                 ],
               ),
             ),
@@ -214,15 +214,15 @@ class _ProfileViewState extends State<ProfileViewVolunteer> {
                     "Notifications",
                     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                   ),
-                  Switch(
-                    value: notifications,
-                    thumbIcon: thumbIcon,
-                    onChanged: (bool value) {
-                      setState(() {
-                        notifications = value;
-                      });
-                    },
-                  )
+                  // Switch(
+                  //   value: notifications,
+                  //   thumbIcon: thumbIcon,
+                  //   onChanged: (bool value) {
+                  //     setState(() {
+                  //       notifications = value;
+                  //     });
+                  //   },
+                  // )
                 ],
               ),
             ),

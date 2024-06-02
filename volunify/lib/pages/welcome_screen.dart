@@ -76,7 +76,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Voluntify',
+                    'Volunify',
                     style: TextStyle(
                         fontSize: screensize.width * 0.14,
                         fontWeight: FontWeight.w900,
@@ -140,7 +140,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             onTap: () {},
                             child: Container(
                               decoration: BoxDecoration(
-
                                   border: Border.all(
                                       width: 2,
                                       color: GlobalVariables.backgroundColor),
@@ -155,7 +154,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                   child: Text(
                                     'Sign In',
                                     style: TextStyle(
-
                                       color: GlobalVariables.backgroundColor,
                                       fontSize: screensize.width * 0.06,
                                     ),
@@ -182,6 +180,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             width: screensize.width * 0.85,
                             height: screensize.height * 0.07,
                             child: InkWell(
+                              onTap: () {
+                                showModalSignup(context: context);
+                              },
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
@@ -191,9 +192,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                       color: Colors.white),
                                   textAlign: TextAlign.center,
                                 ),
-                                onTap: () {
-                                  showModalSignup(context: context);
-                                },
                               ),
                             ),
                           ),
@@ -219,8 +217,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     color: GlobalVariables.backgroundColor),
               ),
             ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

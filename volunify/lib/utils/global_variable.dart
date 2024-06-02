@@ -6,9 +6,7 @@ String baseUrl =
 // String baseUrl = "http://10.0.2.2:8080/golumbia_api";
 
 class GlobalVariables {
-
   static const Color backgroundColor = Color(0xffF8FAFC);
-
 
   static const Color formbackgroundColor = Color(0xffF0F4F9);
   static const Color lightBlue = Color(0xff1C94CC);
@@ -39,4 +37,12 @@ class GlobalVariables {
     ],
     stops: [0.0, 0.68],
   );
+
+  static final carouselImageList = [
+    './asset/b1.jpg',
+    './asset/b2.jpeg',
+    './asset/b3.jpg',
+    // './assets/b4.jpeg',
+    // './assets/b5.jpeg',
+  ];
 }

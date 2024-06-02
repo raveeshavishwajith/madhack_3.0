@@ -10,18 +10,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-  
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash:'asset/logo.png' ,
-      nextScreen:WelcomeScreen() ,
+      splash: 'asset/logo.png',
+      nextScreen: WelcomeScreen(),
       splashTransition: SplashTransition.fadeTransition,
       duration: 3500,
       backgroundColor: Colors.white,
-      
     );
-    return Scaffold(body: Center(child: Text('hi')),);
   }
 }
